@@ -1,1 +1,393 @@
-/* Ini CSS */
+/* Responsive */
+@media only screen and (max-width: 1024px) {
+   /* Mengubah flex direction agar tampilan menjadi satu bagian di tab/mobile */
+   main {
+      flex-direction: column;
+      padding: 0px 50px 0px 50px !important;
+   }
+
+   /* Menyesuaikan width dan padding agar pas di tab/mobile */
+   aside {
+      width: 100% !important;
+      padding: 0px !important;
+   }
+
+   /* Menyesuaikan container judul dan judulnya */
+   .main-title {
+      width: 350px !important;
+      padding: 12px 0px 0px 0px;
+      display: inline-block;
+   }
+
+   .main-title h1 {
+      color: rgb(37, 37, 37);
+      margin: 72px 0px 0px 39px !important;
+   }
+
+   /* Menyesuaikan margin-top dan menambahkan scroll-margin-top agar posisi container hasil pas saat fungsi scrollToHasil() bekerja */
+   .hasil-container {
+      margin-top: 20px !important;
+      scroll-margin-top: 5.2rem !important;
+   }
+
+   /* Mengubah display type dari data BMI user menjadi inline-block agar data ditampilkan kebawah */
+   #data-bmi-container ul {
+      display: inline-block !important;
+   }
+
+   /* Menyesuaikan margin data BMI user */
+   .data-bmi {
+      margin: 0px 0px 20px 0px;
+   }
+
+   /* Mengubah posisi radio button jenis kelamin agar menjadi atas-bawah di mobile */
+   .jenis-kelamin-select {
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+   }
+}
+
+/* Fonts */
+.poppins-regular {
+   font-family: "Poppins", sans-serif;
+   font-weight: 400;
+   font-style: normal;
+}
+
+.poppins-medium {
+   font-family: "Poppins", sans-serif;
+   font-weight: 500;
+   font-style: normal;
+}
+
+.poppins-semibold {
+   font-family: "Poppins", sans-serif;
+   font-weight: 600;
+   font-style: normal;
+}
+
+.poppins-bold {
+   font-family: "Poppins", sans-serif;
+   font-weight: 700;
+   font-style: normal;
+}
+
+/* Colors */
+.bg-secondary {
+   background-color: rgb(245, 245, 245);
+}
+
+.bg-primary {
+   background-color: rgba(25, 72, 224, 0.849);
+}
+
+/* Navbar */
+nav {
+   width: 100%;
+   background-color: rgba(21, 66, 212, 0.822);
+   padding: 20px 0px 20px 0px;
+   box-shadow: 0px 0px 10px 1px rgba(158, 158, 158, 0.459);
+   position: fixed;
+   -webkit-backdrop-filter: blur(6px);
+   backdrop-filter: blur(6px);
+   text-align: center;
+}
+
+nav a {
+   margin: 0px 16px 0px 16px;
+   text-decoration: none;
+   color: white;
+}
+
+nav a:hover {
+   color: rgb(224, 224, 224);
+}
+
+/* Button Styles */
+button {
+   margin: 8px 0px;
+   padding: 10px 24px;
+   border: 1px solid rgb(206, 206, 206);
+   border-radius: 8px;
+   font-weight: 500;
+}
+
+.btn-primary {
+   background-color: rgba(25, 78, 224, 0.849);
+   color: white;
+}
+
+.btn-primary:hover {
+   background-color: rgba(10, 46, 145, 0.849);
+   cursor: pointer;
+}
+
+.btn-primary:disabled {
+   background-color: rgba(112, 140, 218, 0.849);
+   border: 1px solid rgb(206, 206, 206);
+   color: white;
+   cursor: default;
+}
+
+.btn-secondary {
+   background-color: white;
+   color: rgb(26, 26, 26);
+}
+
+.btn-secondary:hover {
+   background-color: rgb(241, 241, 241);
+   cursor: pointer;
+}
+
+/* Table Styles */
+table {
+   width: 100%;
+   text-align: center;
+   font-size: 14px;
+   border-collapse: collapse;
+   border: 1px solid rgba(206, 206, 206, 0.952);
+   margin-bottom: 20px;
+}
+
+#tabel-bmi {
+   scroll-margin-top: 8rem;
+}
+
+th {
+   padding: 8px;
+   background-color: rgba(25, 78, 224, 0.849);
+   color: white;
+}
+
+td {
+   padding: 8px;
+}
+
+tr:nth-child(even) {
+   background-color: rgb(241, 241, 241);
+}
+
+/* Styles */
+
+* {
+   font-family: "Poppins", sans-serif;
+   color: rgb(44, 44, 44);
+}
+
+html {
+   scroll-behavior: smooth;
+}
+
+body {
+   margin: 0;
+   padding: 0;
+}
+
+main {
+   display: flex;
+   margin: 0;
+   padding: 0px 110px 0px 110px;
+}
+
+aside {
+   width: 50%;
+   padding: 0px 50px 0px 50px;
+}
+
+.main-title {
+   width: 450px;
+   padding: 12px 0px 0px 12px;
+   display: inline-block;
+}
+
+.main-title h1 {
+   color: rgb(37, 37, 37);
+   margin: 72px 0px 0px 148px;
+}
+
+hr {
+   margin: 0px 0px 10px 0px;
+   padding: 0;
+   border: none;
+   border-bottom: 1px solid rgba(110, 110, 110, 0.267);
+}
+
+h3 {
+   font-weight: 600;
+   margin-top: 0;
+   margin-bottom: 4px;
+}
+
+article header h3 {
+   font-weight: 600;
+   margin-bottom: -10px;
+}
+
+h4 {
+   margin: 4px 0px;
+}
+
+p {
+   text-align: justify;
+   font-size: 14px;
+}
+
+li {
+   font-size: 14px;
+   text-align: justify;
+}
+
+form {
+   padding: 22px 32px;
+   margin: 24px 0px;
+   border-radius: 12px;
+}
+
+input[type="number"] {
+   width: 100%;
+   border: 1px solid rgb(206, 206, 206);
+   padding: 8px 0px 8px 12px;
+   border-radius: 4px;
+   box-sizing: border-box;
+}
+
+input[type="radio"] {
+   margin: -2px 4px 0px 0px;
+   vertical-align: middle;
+}
+
+label {
+   margin: 0px 16px 0px 0px;
+   font-size: 14px;
+}
+
+form div {
+   margin: 16px 0px 0px 0px;
+}
+
+form h4 {
+   font-size: 14px;
+   font-weight: 600;
+}
+
+.hasil-container {
+   margin-top: -20px;
+   padding: 24px 36px;
+   border-radius: 12px;
+   box-shadow: 0px 0px 4px 1px rgba(216, 216, 216, 0.726);
+   scroll-margin-top: 8rem;
+   transition: all;
+}
+
+.hasil {
+   text-align: center;
+}
+
+#hasil-bmi {
+   font-size: 56px;
+   font-weight: 600;
+   margin: 16px 0px 0px 0px;
+}
+
+#status-berat-badan {
+   font-size: 20px;
+   margin-top: 0;
+}
+
+.hasil h3 {
+   text-align: justify;
+   margin: 0px 0px;
+}
+
+#data-bmi-container {
+   display: none;
+}
+
+#data-bmi-container ul {
+   list-style: none;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 40px;
+   margin: 16px 0px 24px 0px;
+   padding: 0;
+}
+
+#data-bmi-container li {
+   padding: 5px 20px;
+   border-radius: 20px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-weight: 500;
+   background-color: rgb(62, 168, 255);
+   color: white;
+}
+
+#data-bmi-container li svg {
+   margin: 0 8px 1px 0;
+   fill: rgb(255, 255, 255);
+}
+
+#data-bmi-container img {
+   margin: 0 8px 1px 0;
+}
+
+.data-bmi p {
+   color: white;
+   margin: 0;
+   padding: 0;
+}
+
+img {
+   margin: -3px 4px 0px 0px;
+   vertical-align: middle;
+}
+
+.disclaimer h3 {
+   display: inline-block;
+   text-align: left;
+   background-color: rgb(235, 235, 235);
+   padding: 18px;
+   border-radius: 12px;
+   font-size: 16px;
+   color: rgba(36, 36, 36, 0.918);
+   margin: 0px;
+}
+
+.disclaimer p {
+   margin: -24px 0px 10px 0px;
+   background-color: rgb(235, 235, 235);
+   padding: 18px;
+   border-radius: 12px;
+   color: rgba(44, 44, 44, 0.945);
+}
+
+.hasil-btn {
+   text-align: center;
+}
+
+.konsultasi-container {
+   margin-top: 32px;
+   padding: 32px;
+   border-radius: 12px;
+   scroll-margin-top: 5.2rem;
+}
+
+.konsultasi-container h3 {
+   padding: 0px;
+   margin: 0px;
+}
+
+/* Footer */
+
+footer {
+   width: 100%;
+   bottom: 0;
+   padding: 60px 0px 10px 0px;
+}
+
+footer p {
+   text-align: center;
+}
