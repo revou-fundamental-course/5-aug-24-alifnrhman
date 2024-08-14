@@ -3,7 +3,7 @@
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="icon" href="/assets/icon.png" type="image/x-icon" />
+      <link rel="icon" href="/assets/icon.png?" type="image/x-icon" />
       <title>Kalkulator BMI</title>
       <link rel="stylesheet" href="css\styles.css" />
       <style>
@@ -12,18 +12,25 @@
       <script src="js\script.js"></script>
    </head>
    <body>
+      <!-- Navbar -->
       <nav>
          <a href="#" class="">Home</a>
          <a href="#tabel-bmi">Tabel BMI</a>
          <a href="#konsultasi">Konsultasi</a>
       </nav>
+      <!-- End of Navbar -->
+
+      <!-- Header -->
       <header class="main-title">
          <h1>
             Kalkulator BMI
             <hr />
          </h1>
       </header>
+      <!-- End of Header -->
+
       <main>
+         <!-- Left Side -->
          <aside>
             <article>
                <header>
@@ -35,6 +42,7 @@
                </p>
             </article>
 
+            <!-- Form -->
             <form class="bg-secondary" onsubmit="hitungBMI(); return false">
                <div class="jenis-kelamin-select">
                   <h4>Jenis Kelamin</h4>
@@ -50,17 +58,17 @@
 
                <div>
                   <h4>Usia (tahun)</h4>
-                  <input type="number" id="usia" required />
+                  <input type="number" id="usia" placeholder="Masukkan usia" required />
                </div>
 
                <div>
                   <h4>Tinggi Badan (cm)</h4>
-                  <input type="number" id="tinggi-badan" required />
+                  <input type="number" id="tinggi-badan" placeholder="Masukkan tinggi badan" required />
                </div>
 
                <div>
                   <h4>Berat Badan (kg)</h4>
-                  <input type="number" id="berat-badan" required />
+                  <input type="number" id="berat-badan" placeholder="Masukkan berat badan" required />
                </div>
 
                <div>
@@ -68,8 +76,10 @@
                   <button class="btn-secondary bg-white" type="reset">Reset</button>
                </div>
             </form>
+            <!-- End of Form -->
 
             <article>
+               <!-- Form Information -->
                <section>
                   <header>
                      <h3>Informasi Formulir</h3>
@@ -91,7 +101,9 @@
                      badan yang kurang, ideal, berlebih, atau obesitas.
                   </p>
                </section>
+               <!-- End of Form Information -->
 
+               <!-- BMI Table -->
                <section id="tabel-bmi">
                   <h3>Tabel BMI</h3>
                   <table>
@@ -117,11 +129,15 @@
                      </tr>
                   </table>
                </section>
+               <!-- End of BMI Table -->
             </article>
          </aside>
+         <!-- End of Left Side -->
 
+         <!-- Right Side -->
          <aside>
             <section>
+               <!-- Hasil BMI Box -->
                <div class="hasil-container bg-white" id="hasil-container">
                   <div class="hasil">
                      <div id="data-bmi-container">
@@ -184,7 +200,9 @@
                   </div>
                </div>
             </section>
+            <!-- End of Hasil BMI Box -->
 
+            <!-- Consultation Section -->
             <section id="konsultasi" class="konsultasi-container bg-secondary">
                <div>
                   <h3>Ingin melakukan konsultasi dengan ahli gizi atau dokter?</h3>
@@ -199,10 +217,15 @@
                   <button class="btn-primary">Registrasi Online Sekarang</button>
                </div>
             </section>
+            <!-- End of Consultation Section -->
          </aside>
+         <!-- End of Right Side -->
       </main>
+
+      <!-- Footer -->
       <footer>
          <p>Made by <strong>Alif Nurahman</strong> 🚀</p>
       </footer>
+      <!-- End of Footer -->
    </body>
 </html>
